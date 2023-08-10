@@ -153,6 +153,20 @@ class _KenBurnsState extends State<KenBurns> with TickerProviderStateMixin {
   /// Using the [KenBurnsGenerator] generateNextConfig
   Future<void> _createNextAnimations(
       {required double height, required double width}) async {
+    try {
+      _scaleController?.dispose();
+    } catch (e) {
+      print('Error disposing _scaleController: $e');
+    }
+
+    try {
+      _translationController?.dispose();
+    } catch (e) {
+      print('Error disposing _translationController: $e');
+    }
+
+    _scaleController = null;
+    _translationController = null;
     final KenBurnsGeneratorConfig nextConfig =
         _kenburnsGenerator.generateNextConfig(
             width: width,

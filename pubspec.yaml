@@ -1,0 +1,18 @@
+name: kenburns_nullsafety
+description: The migration of the kenburns effect plugin to null-safety. The Ken Burns effect is a type of panning and zooming effect used in video production from still imagery.
+version: 1.0.0
+homepage: https://github.com/the-Jinxist/kenburns_nullsafety.git
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# The following section is specific to Flutter.
+flutter:
